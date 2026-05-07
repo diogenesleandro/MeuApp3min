@@ -29,7 +29,36 @@ export default function HomeScreen() {
             Integrado ao Ensino Médio
           </Text>
         </View>
+        {/* TABELA DE HORÁRIOS */}
+        <View style={styles.tabelaContainer}>
+          <Text style={styles.tabelaTitulo}>Cronograma de Aulas - 2026</Text>
+          
+          {/* Cabeçalho */}
+          <View style={[styles.tabelaLinha, styles.tabelaCabecalho]}>
+            <Text style={styles.tabelaTextoCabecalho}>Aula</Text>
+            <Text style={styles.tabelaTextoCabecalho}>Segunda</Text>
+            <Text style={styles.tabelaTextoCabecalho}>Terça</Text>
+          </View>
 
+          {/* Linha 1 */}
+          <View style={styles.tabelaLinha}>
+            <Text style={styles.tabelaTexto}>1ª</Text>
+            <Text style={styles.tabelaTexto}>DDM I</Text>
+            <Text style={styles.tabelaTexto}>PAM II</Text>
+          </View>
+
+          {/* Linha 2 */}
+          <View style={styles.tabelaLinha}>
+            <Text style={styles.tabelaTexto}>2ª</Text>
+            <Text style={styles.tabelaTexto}>DDM I</Text>
+            <Text style={styles.tabelaTexto}>PAM II</Text>
+          </View>
+
+          {/* Linha de Destaque (Intervalo) */}
+          <View style={[styles.tabelaLinha, styles.tabelaDestaque]}>
+            <Text style={[styles.tabelaTexto, { color: '#00d4ff', fontWeight: 'bold' }]}>Intervalo</Text>
+          </View>
+        </View>
         <Text style={styles.textoFundo}>Arraste para ver mais</Text>
       </ScrollView>
     </View>
@@ -91,5 +120,49 @@ card: {
     fontSize: 12,
     marginTop: 20,
     textTransform: 'uppercase',
-  }
+  }, 
+  tabelaContainer: {
+    width: '100%',
+    marginTop: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    borderRadius: 15,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#00d4ff33',
+  },
+  tabelaTitulo: {
+    color: '#00d4ff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  tabelaLinha: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#222',
+  },
+  tabelaCabecalho: {
+    borderBottomWidth: 2,
+    borderBottomColor: '#00d4ff',
+  },
+  tabelaDestaque: {
+    backgroundColor: '#002a50',
+    borderBottomWidth: 0,
+    borderRadius: 5,
+  },
+  tabelaTextoCabecalho: {
+    color: '#00d4ff',
+    fontWeight: 'bold',
+    flex: 1,
+    textAlign: 'center',
+  },
+  tabelaTexto: {
+    color: '#ccc',
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 14,
+  },
 });

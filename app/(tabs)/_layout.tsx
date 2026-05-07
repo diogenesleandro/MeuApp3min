@@ -39,7 +39,7 @@ export default function TabLayout() {
 
       {/* 2. TELA 1º MIN */}
       <Tabs.Screen
-        name="primeiro"
+        name="1min"
         options={{
           title: '1º ANO - MIN',
           tabBarLabel: '1MIN',
@@ -49,7 +49,7 @@ export default function TabLayout() {
 
       {/* 3. TELA 2º MIN */}
       <Tabs.Screen
-        name="segundo"
+        name="2min"
         options={{
           title: '2º ANO - MIN',
           tabBarLabel: '2MIN',
@@ -59,7 +59,7 @@ export default function TabLayout() {
 
       {/* 4. TELA 3º MIN */}
       <Tabs.Screen
-        name="terceiro"
+        name="3min"
         options={{
           title: '3º ANO - MIN',
           tabBarLabel: '3MIN',
